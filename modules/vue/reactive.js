@@ -1,3 +1,5 @@
+import { update } from './render'
+
 export default function (vm, data) {
   vm.$data = data()
   
@@ -8,6 +10,7 @@ export default function (vm, data) {
       },
       set (newValue) {
         vm.$data[key] = newValue
+        update(vm, key)
       }
     })
   }

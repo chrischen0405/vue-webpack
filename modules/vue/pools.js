@@ -10,9 +10,9 @@ export const expPool = new Map()
 const regExp = /\{\{(.+?)\}\}/
 
 export default function (vm, methods) {
-  const { $nodes } = vm
+  const { $node } = vm
   
-  const allNodes = $nodes.querySelectorAll('*')
+  const allNodes = $node.querySelectorAll('*')
   const { vClick } = vEvent
   
   allNodes.forEach(node => {
